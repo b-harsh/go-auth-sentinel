@@ -9,8 +9,8 @@ import (
 	"net/http"
 	"strings"
 	"time"
-
 	"github.com/gin-gonic/gin"
+	"os"
 )
 
 func GenerateTOTP(secret string) (string, error) {
@@ -68,8 +68,12 @@ func verifyToken(c *gin.Context) {
 }
 
 func main() {
-	r := gin.Default()
-	r.POST("/verify", verifyToken)
-	fmt.Println("Go-Auth-Sentinel running on :8080")
-	r.Run(":8080")
+    r := gin.Default()
+    r.POST("/verify", verifyToken)
+    port := os.Getenv("PORT")
+    if port == "" {
+        port = "8080" 
+    }
+    fmt.Println(">> Go-Auth-Sentinel running on port " + port)
+    r.Run(":" + port)
 }
