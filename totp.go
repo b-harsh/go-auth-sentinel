@@ -69,11 +69,19 @@ func verifyToken(c *gin.Context) {
 
 func main() {
     r := gin.Default()
+    r.GET("/", func(c *gin.Context) {
+        c.JSON(http.StatusOK, gin.H{
+            "status":  "online",
+            "message": "Go-Auth-Sentinel is running securely 🛡️",
+            "usage":   "Send a POST request to /verify with {'secret': '...', 'token': '...'}",
+        })
+    })
     r.POST("/verify", verifyToken)
     port := os.Getenv("PORT")
     if port == "" {
-        port = "8080" 
+        port = "8080"
     }
+
     fmt.Println(">> Go-Auth-Sentinel running on port " + port)
     r.Run(":" + port)
 }
