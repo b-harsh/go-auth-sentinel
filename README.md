@@ -1,5 +1,5 @@
 
-# 🛡️ Go-Auth-Sentinel
+#  Go-Auth-Sentinel
 
 > A high-performance, containerized Two-Factor Authentication (2FA) microservice built in Go.
 > **Implements RFC 6238 (TOTP) from scratch without external OTP libraries.**
@@ -8,7 +8,7 @@
 ![Docker](https://img.shields.io/badge/Docker-Enabled-2496ED?style=flat&logo=docker)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-## 📖 Overview
+##  Overview
 
 **Go-Auth-Sentinel** is a backend microservice designed to handle Time-Based One-Time Password (TOTP) verification. 
 
@@ -22,7 +22,7 @@ Unlike standard implementations that rely on pre-built libraries (like `pquerna/
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 * **Language:** Go (Golang) 1.23
 * **Framework:** Gin Web Framework
@@ -31,7 +31,7 @@ Unlike standard implementations that rely on pre-built libraries (like `pquerna/
 
 ---
 
-## 📐 How It Works (The Logic)
+##  How It Works (The Logic)
 
 This service validates a 6-digit code using the following cryptographic workflow:
 
@@ -50,7 +50,7 @@ This service validates a 6-digit code using the following cryptographic workflow
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 * [Go 1.21+](https://go.dev/dl/) (for local dev)
@@ -78,7 +78,7 @@ go run totp.go
 
 ---
 
-## 🔌 API Documentation
+##  API Documentation
 
 ### Verify Token
 
@@ -123,7 +123,7 @@ Validates a TOTP code against a secret key.
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```text
 go-auth-sentinel/
@@ -135,10 +135,10 @@ go-auth-sentinel/
 
 ```
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## 📄 License
+##  License
 
 This project is licensed under the MIT License.
