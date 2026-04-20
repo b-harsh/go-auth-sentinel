@@ -72,7 +72,7 @@ func main() {
     r.GET("/", func(c *gin.Context) {
         c.JSON(http.StatusOK, gin.H{
             "status":  "online",
-            "message": "Go-Auth-Sentinel is running securely 🛡️",
+            "message": "Go-Auth-Sentinel is running securely ",
             "usage":   "Send a POST request to /verify with {'secret': '...', 'token': '...'}",
         })
     })
